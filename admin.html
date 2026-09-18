@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PRIVÉ NIGHT 2.0 — Organizer</title><link rel="stylesheet" href="/style.css"></head>
+<body class="admin-body">
+<div id="loginView" class="login-wrap">
+  <div class="login-card"><div class="brand">♛ <span>PRIVÉ</span> <small>NIGHT 2.0</small></div><h1>Organizer Login</h1>
+  <form id="loginForm"><label>Email<input id="loginEmail" type="email" required></label><label>Password<input id="loginPassword" type="password" required></label><button class="btn" type="submit">Sign in</button><div id="loginMsg" class="message"></div></form></div>
+</div>
+<div id="dashboardView" hidden>
+<header class="dash-top"><div class="brand">♛ <span>PRIVÉ</span> <small>NIGHT 2.0</small></div><div><span id="adminEmail"></span><button id="logout" class="ghost">Logout</button></div></header>
+<div class="dash-shell">
+<aside class="sidebar"><a class="active">Dashboard</a><a href="#attendees">Attendees</a><a href="#payments">Payments</a><a href="#tickets">Tickets</a><a href="#settings">Event Settings</a></aside>
+<main class="dash-main"><div class="dash-heading"><div><p class="eyebrow">ORGANIZER DASHBOARD</p><h1>Welcome back</h1></div><button id="refresh" class="ghost">Refresh</button></div>
+<div class="stats">
+<div class="stat"><span>Tickets Sold</span><b id="sold">0</b></div><div class="stat"><span>Verified Revenue</span><b id="revenue">₦0</b></div><div class="stat"><span>Pending Payments</span><b id="pending">0</b></div><div class="stat"><span>Confirmed Guests</span><b id="confirmed">0</b></div>
+</div>
+<section class="panel" id="tickets"><div class="panel-head"><h2>Ticket categories</h2></div><div id="ticketStats" class="ticket-admin-grid"></div></section>
+<section class="panel" id="attendees"><div class="panel-head"><h2>Attendees</h2><a class="btn small" href="/api/admin/export.csv">Export CSV</a></div><input id="search" class="search" placeholder="Search name, phone, reference or ticket code"><div class="table-wrap"><table><thead><tr><th>Name</th><th>Phone</th><th>Ticket</th><th>Amount</th><th>Payment</th><th>Action</th></tr></thead><tbody id="attendeeRows"></tbody></table></div></section>
+<section class="panel" id="payments"><div class="panel-head"><h2>Payment verification</h2></div><p class="muted">Review the submitted payment reference before marking a registration verified.</p><div class="table-wrap"><table><thead><tr><th>Name</th><th>Reference</th><th>Amount</th><th>Status</th><th>Action</th></tr></thead><tbody id="paymentRows"></tbody></table></div></section>
+<section class="panel" id="settings"><div class="panel-head"><h2>Event settings</h2></div><form id="settingsForm"><div class="two"><label>Event name<input name="event_name"></label><label>Event date<input name="event_date"></label></div><div class="two"><label>Red carpet<input name="red_carpet"></label><label>Main event<input name="main_event"></label></div><label>Venue<input name="venue"></label><button class="btn" type="submit">Save settings</button><div id="settingsMsg" class="message"></div></form></section>
+</main></div></div><script src="/admin.js"></script></body></html>
