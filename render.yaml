@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: prive-night-2-ticketing
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: OPAY_ACCOUNT_NAME
+        value: PRIVÉ NIGHT 2.0
+      - key: OPAY_ACCOUNT_NUMBER
+        sync: false
+      - key: WHATSAPP_NUMBER
+        value: 2349023770047
+      - key: ORGANIZER_EMAIL
+        value: mosesayomikutemitope@gmail.com
+      - key: INSTAGRAM_HANDLE
+        value: temi_t_couture_1
+      - key: TIKTOK_HANDLE
+        value: temi_t_couture_1
