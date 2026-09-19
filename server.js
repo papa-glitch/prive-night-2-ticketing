@@ -208,8 +208,8 @@ app.patch("/api/admin/attendees/:id/payment", auth, async (req, res) => {
     );
     if (!result.rowCount) return res.status(404).json({ error: "Attendee not found." });
     res.json({ attendee: result.rows[0] });
-  } catch {
-    res.status(500).json({ error: "Could not update payment." });
+} catch (e) {
+  console.error("PAYMENT UPDATE ERROR:", e);
   }
 });
 
