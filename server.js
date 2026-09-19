@@ -245,7 +245,7 @@ app.put("/api/admin/settings", auth, async (req,res) => {
   res.json({ ok:true });
 });
 
-app.get("/admin", (req,res) => res.sendFile(path.join(__dirname,"public","admin.html")));
+app.get("/admin", (req,res) => res.sendFile(path.join(__dirname,"admin.html")));
 app.get("*", (req,res) => res.sendFile(path.join(__dirname,"public","index.html")));
 
 initDb().then(() => app.listen(PORT, () => console.log(`PRIVÉ NIGHT 2.0 running on ${PORT}`)))
