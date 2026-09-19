@@ -25,9 +25,13 @@ app.use(cookieParser());
 app.use(express.static(__dirname));
 
 const tickets = [
-  { code: "REGULAR", name: "Regular", price: 15000, capacity: 100 },
-  { code: "VIP", name: "VIP", price: 50000, capacity: 60 },
-  { code: "VVIP", name: "VVIP", price: 100000, capacity: 30 }
+  { code: "EARLY_BIRD", name: "Early Bird", price: 2000, capacity: 200 },
+  { code: "REGULAR", name: "Regular", price: 3000, capacity: 500 },
+  { code: "VIP", name: "VIP", price: 5000, capacity: 200 },
+  { code: "TABLE_FOR_TWO", name: "Table for Two", price: 50000, capacity: 100 },
+  { code: "TABLE_FOR_FIVE", name: "Table for Five", price: 100000, capacity: 100 },
+  { code: "SILVER_SEAT", name: "Silver Seat", price: 200000, capacity: 50 },
+  { code: "GOLDEN_SEAT", name: "Golden Seat", price: 500000, capacity: 50 }
 ];
 
 async function initDb() {
