@@ -25,7 +25,7 @@ app.use(cookieParser());
 app.use(express.static(__dirname));
 
 const tickets = [
-  { code: "EARLY_BIRD", name: "Early Bird", price: 2000, capacity: 200 },
+ 
   { code: "REGULAR", name: "Regular", price: 3000, capacity: 500 },
   { code: "VIP", name: "VIP", price: 5000, capacity: 200 },
   { code: "TABLE_FOR_TWO", name: "Table for Two", price: 50000, capacity: 100 },
